@@ -17,7 +17,7 @@ log4js.configure({
   });
 
 var handler = function(request, response) {
-  logger.info("Received request from " + request.connection.remoteAddress);
+  logger.info("Received request from IP" + request.connection.remoteAddress + " with hostname of " + request.connection.hostname);
   response.writeHead(200);
   response.end("You've hit " + os.hostname() + "\n");
 };
